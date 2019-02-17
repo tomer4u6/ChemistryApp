@@ -267,8 +267,8 @@
                     android:background="@drawable/border"
                     android:gravity="center"
                     android:text="8\nO"
-                    android:textSize="18sp"
-                    />
+                    android:textColor="#000"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView20"
@@ -308,8 +308,8 @@
                     android:background="@drawable/border"
                     android:gravity="center"
                     android:text="13\nAl"
-                    android:textSize="18sp"
-                    />
+                    android:textColor="#000"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView23"
