@@ -10,7 +10,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -51,11 +50,11 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btn_tableActivity"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layoutDirection="rtl"
+                android:onClick="onClick_tableActivity"
                 android:text="הטבלה המחזורית"
                 android:textDirection="rtl" />
 
@@ -65,11 +64,11 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btn_videosActivity"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layoutDirection="rtl"
+                android:onClick="onClick_videosActivity"
                 android:text="סרטוני הסבר והעשרה"
                 android:textDirection="rtl" />
 
@@ -79,11 +78,11 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btn_mattersActivity"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layoutDirection="rtl"
+                android:onClick="onClick_mattersActivity"
                 android:text="מולקולות וחומרים"
                 android:textDirection="rtl" />
 
@@ -93,11 +92,11 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btn_alarmActivity"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layoutDirection="rtl"
+                android:onClick="onClick_alarmActivity"
                 android:text="הגדרות התראה"
                 android:textDirection="rtl" />
 
