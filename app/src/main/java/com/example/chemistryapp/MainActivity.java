@@ -1,4 +1,4 @@
-//Version 1002
+//Version 1003
 package com.example.chemistryapp;
 
 import android.content.Intent;
@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_videosActivity(View view) {
+        Intent t = new Intent(this,VideosActivity.class);
+        startActivity(t);
     }
 
     public void onClick_mattersActivity(View view) {
