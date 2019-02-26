@@ -40,12 +40,13 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btn1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center"
             android:textStyle="bold"
-            android:onClick="openVideo1"
+            android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
             android:text="סרטון הסבר על הטבלה המחזורית" />
@@ -56,12 +57,13 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btn2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center"
             android:textStyle="bold"
-            android:onClick="openVideo2"
+            android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
             android:text="המודל החלקיקי של החומר" />
@@ -91,12 +93,13 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btn3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:textStyle="bold"
             android:gravity="center"
-            android:onClick="openVideo3"
+            android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
             android:text="מה זה אטום?" />
@@ -107,12 +110,13 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btn4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center"
             android:textStyle="bold"
-            android:onClick="openVideo4"
+            android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
             android:text="יסוד, תרכובת ותערובת" />
@@ -142,13 +146,14 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btn5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center"
             android:textStyle="bold"
             android:textDirection="rtl"
-            android:onClick="openVideo5"
+            android:onClick="openVideo"
             android:background="@drawable/rounded_btn"
             android:text="שיר באנגלית על הטבלה המחורית" />
 
@@ -158,13 +163,14 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btn6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center"
             android:textStyle="bold"
             android:textDirection="rtl"
-            android:onClick="openVideo6"
+            android:onClick="openVideo"
             android:background="@drawable/rounded_btn"
             android:text="הסבר על פצצת אטום" />
 

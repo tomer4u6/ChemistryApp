@@ -29,38 +29,27 @@ public class VideosActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void openVideo1(View view) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=gmlmg3XU6A0");
-        Intent t = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(t);
-    }
-
-    public void openVideo2(View view) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=Lk3Q2RZ2hRM");
-        Intent t = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(t);
-    }
-
-    public void openVideo3(View view) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=1TDwfM2Gdgg");
-        Intent t = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(t);
-    }
-
-    public void openVideo4(View view) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=SiN1KA1e8r8");
-        Intent t = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(t);
-    }
-
-    public void openVideo5(View view) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=rz4Dd1I_fX0");
-        Intent t = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(t);
-    }
-
-    public void openVideo6(View view) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=o1Ov3xk1F7g");
+    public void openVideo(View view) {
+        int id1 = view.getId();
+        Uri uri = null;
+        if(id1==R.id.btn1){
+            uri = Uri.parse("https://www.youtube.com/watch?v=gmlmg3XU6A0");
+        }
+        if(id1==R.id.btn2){
+            uri = Uri.parse("https://www.youtube.com/watch?v=Lk3Q2RZ2hRM");
+        }
+        if(id1==R.id.btn3){
+            uri = Uri.parse("https://www.youtube.com/watch?v=1TDwfM2Gdgg");
+        }
+        if(id1==R.id.btn4){
+            uri = Uri.parse("https://www.youtube.com/watch?v=SiN1KA1e8r8");
+        }
+        if(id1==R.id.btn5){
+            uri = Uri.parse("https://www.youtube.com/watch?v=rz4Dd1I_fX0");
+        }
+        if(id1==R.id.btn6){
+            uri = Uri.parse("https://www.youtube.com/watch?v=o1Ov3xk1F7g");
+        }
         Intent t = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(t);
     }
