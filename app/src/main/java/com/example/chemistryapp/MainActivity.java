@@ -1,4 +1,4 @@
-//Version 1004
+//Version 1005
 package com.example.chemistryapp;
 
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     @Override
@@ -30,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_videosActivity(View view) {
-        Intent t = new Intent(this,VideosActivity.class);
+        Intent t = new Intent(this, VideosActivity.class);
         startActivity(t);
     }
 
     public void onClick_mattersActivity(View view) {
+        Intent t = new Intent(this,mattersActivity.class);
+        startActivity(t);
     }
 
     public void onClick_alarmActivity(View view) {
