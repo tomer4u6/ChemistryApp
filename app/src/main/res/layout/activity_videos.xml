@@ -40,7 +40,6 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btn1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -49,6 +48,7 @@
             android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
+            android:tag="https://www.youtube.com/watch?v=gmlmg3XU6A0"
             android:text="סרטון הסבר על הטבלה המחזורית" />
 
         <Space
@@ -57,7 +57,6 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btn2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -66,6 +65,7 @@
             android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
+            android:tag="https://www.youtube.com/watch?v=Lk3Q2RZ2hRM"
             android:text="המודל החלקיקי של החומר" />
 
         <Space
@@ -93,7 +93,6 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btn3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -102,6 +101,7 @@
             android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
+            android:tag="https://www.youtube.com/watch?v=1TDwfM2Gdgg"
             android:text="מה זה אטום?" />
 
         <Space
@@ -110,7 +110,6 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btn4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -119,6 +118,7 @@
             android:onClick="openVideo"
             android:textDirection="rtl"
             android:background="@drawable/rounded_btn"
+            android:tag="https://www.youtube.com/watch?v=SiN1KA1e8r8"
             android:text="יסוד, תרכובת ותערובת" />
 
         <Space
@@ -146,7 +146,6 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btn5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -155,6 +154,7 @@
             android:textDirection="rtl"
             android:onClick="openVideo"
             android:background="@drawable/rounded_btn"
+            android:tag="https://www.youtube.com/watch?v=rz4Dd1I_fX0"
             android:text="שיר באנגלית על הטבלה המחורית" />
 
         <Space
@@ -163,7 +163,6 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btn6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
@@ -172,6 +171,7 @@
             android:textDirection="rtl"
             android:onClick="openVideo"
             android:background="@drawable/rounded_btn"
+            android:tag="https://www.youtube.com/watch?v=o1Ov3xk1F7g"
             android:text="הסבר על פצצת אטום" />
 
         <Space

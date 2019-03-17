@@ -1,4 +1,4 @@
-//Version 1005
+//Version 1006
 package com.example.chemistryapp;
 
 import android.content.Intent;
@@ -43,5 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_alarmActivity(View view) {
+        Intent t = new Intent(this,notificationActivity.class);
+        startActivity(t);
     }
 }

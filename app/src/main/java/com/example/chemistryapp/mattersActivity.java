@@ -4,6 +4,11 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -90,6 +95,8 @@ public class mattersActivity extends AppCompatActivity implements AdapterView.On
         matterText.setText(getString(mattersId[i]));
         matterImage1.setImageResource(imageArray1[i]);
         matterImage2.setImageResource(imageArray2[i]);
+
+        matterText.setMovementMethod(new ScrollingMovementMethod());
 
         adb = new AlertDialog.Builder(this);
         adb.setView(matters_dialog);
