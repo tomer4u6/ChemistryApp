@@ -1,13 +1,19 @@
 package com.example.chemistryapp;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -17,6 +23,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class notificationActivity extends AppCompatActivity {
 
@@ -29,6 +36,7 @@ public class notificationActivity extends AppCompatActivity {
     ToggleButton notifyTb;
     PendingIntent alarmIntent;
     Button timeBtn;
+    String chosenRingtone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +46,15 @@ public class notificationActivity extends AppCompatActivity {
         timeBtn = (Button)findViewById(R.id.timeBtn);
 
         SharedPreferences settings = getSharedPreferences("com.example.chemistryapp",MODE_PRIVATE);
+
         boolean toggleState = settings.getBoolean("toggle_status",false);
+
         hour = settings.getInt("hour",14);
         minute = settings.getInt("minute",0);
+
+        chosenRingtone = settings.getString("sound","");
+
+        timeBtn.setText("קביעת שעות לחזרה - "+Integer.toString(hour)+":"+Integer.toString(minute));
 
         if(toggleState){
             notifyTb.setChecked(true);
@@ -98,6 +112,7 @@ public class notificationActivity extends AppCompatActivity {
     }
 
     public void enableAlarm(View view) {
+
         if(notifyTb.isChecked()) {
 
             SharedPreferences.Editor editor =
@@ -108,19 +123,27 @@ public class notificationActivity extends AppCompatActivity {
             Intent t = new Intent(notificationActivity.this, AlarmReceiver.class);
             t.putExtra("notificationId", 1);
             t.putExtra("appMessage", "הגיע הזמן ללמוד קצת כימיה");
+            t.putExtra("soundUri",chosenRingtone);
 
             alarmIntent = PendingIntent.getBroadcast(notificationActivity.this, 0,
-                    t, PendingIntent.FLAG_CANCEL_CURRENT);
+                    t, PendingIntent.FLAG_UPDATE_CURRENT);
 
             alarm = (AlarmManager) getSystemService(ALARM_SERVICE);
+
 
             Calendar startTime = Calendar.getInstance();
             startTime.set(Calendar.HOUR_OF_DAY, hour);
             startTime.set(Calendar.MINUTE, minute);
-            startTime.set(Calendar.SECOND, 0);
-            long alarmStartTime = startTime.getTimeInMillis();
+            startTime.set(Calendar.SECOND,10);
+            Log.d( "Hour and minute",hour+":"+minute);
 
-            alarm.setRepeating(AlarmManager.RTC_WAKEUP, alarmStartTime, AlarmManager.INTERVAL_DAY, alarmIntent);
+            alarm.setRepeating(AlarmManager.RTC_WAKEUP,
+                    startTime.getTimeInMillis(),
+                    AlarmManager.INTERVAL_DAY,
+                    alarmIntent);
+
+            timeBtn.setText("קביעת שעות לחזרה - "+Integer.toString(hour)+":"+Integer.toString(minute));
+
             Toast.makeText(this, "התראות מאופשרות ונקבעו לשעה "+Integer.toString(hour)+":"+Integer.toString(minute), Toast.LENGTH_SHORT).show();
         }
         else{
@@ -130,13 +153,43 @@ public class notificationActivity extends AppCompatActivity {
             editor.putBoolean("toggle_status",false);
             editor.commit();
 
-            try {
+            if(alarm != null){
                 alarm.cancel(alarmIntent);
             }
-            catch (Exception ex){
-            }
 
+            timeBtn.setText("קביעת שעות לחזרה - "+Integer.toString(hour)+":"+Integer.toString(minute));
             Toast.makeText(this, "התראות כבויות", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void chooseSound(View view) {
+        Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE, "Select Tone");
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, (Uri) null);
+        this.startActivityForResult(intent, 5);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK && requestCode == 5)
+        {
+            Uri uri = data.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+
+            if (uri != null)
+            {
+                this.chosenRingtone = uri.toString();
+            }
+            else
+            {
+                this.chosenRingtone = null;
+            }
+        }
+        SharedPreferences.Editor editor =
+                getSharedPreferences("com.example.chemistryapp",MODE_PRIVATE).edit();
+        editor.putString("sound",chosenRingtone);
+        editor.commit();
+        enableAlarm(null);
     }
 }

@@ -90,6 +90,7 @@
                 android:layout_weight="1"
                 android:gravity="right|center"
                 android:text="צליל להתראה"
+                android:onClick="chooseSound"
                 android:textSize="24sp" />
 
             <Button

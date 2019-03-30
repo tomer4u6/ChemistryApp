@@ -1,4 +1,4 @@
-//Version 1006
+//Version 1007
 package com.example.chemistryapp;
 
 import android.content.Intent;

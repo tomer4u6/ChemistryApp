@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 
 public class AlarmReceiver extends BroadcastReceiver {
@@ -14,19 +15,25 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         int notificationId = intent.getIntExtra("notificationId",0);
         String message = intent.getStringExtra("appMessage");
+        Uri sound = Uri.parse(intent.getStringExtra("soundUri"));
 
         Intent t = new Intent(context,MainActivity.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(context,0,t,0);
+        t.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        PendingIntent contentIntent = PendingIntent.getActivity(context,0,t,PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationManager notificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        long[] v = {500,1000};
 
         Notification.Builder builder = new Notification.Builder(context);
         builder.setSmallIcon(R.mipmap.ic_launcher_round)
                 .setContentTitle("LEARN SOME CHEMISTRY!")
                 .setContentText(message)
-                .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)
+                .setVibrate(v)
+                .setSound(sound)
                 .setContentIntent(contentIntent);
         if (Build.VERSION.SDK_INT < 16) {
             notificationManager.notify(notificationId,builder.getNotification());
