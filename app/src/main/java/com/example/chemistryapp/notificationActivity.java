@@ -2,6 +2,7 @@ package com.example.chemistryapp;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,6 +38,7 @@ public class notificationActivity extends AppCompatActivity {
     PendingIntent alarmIntent;
     Button timeBtn;
     String chosenRingtone;
+    String hourString,minString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,22 @@ public class notificationActivity extends AppCompatActivity {
 
         chosenRingtone = settings.getString("sound","");
 
-        timeBtn.setText("קביעת שעות לחזרה - "+Integer.toString(hour)+":"+Integer.toString(minute));
+        if(minute<10){
+            minString = "0"+Integer.toString(minute);
+        }
+        else{
+            minString = Integer.toString(minute);
+        }
+
+        if(hour<10){
+            hourString = "0"+Integer.toString(hour);
+        }
+        else{
+            hourString = Integer.toString(hour);
+
+        }
+
+        timeBtn.setText("קביעת שעות לחזרה - "+hourString+":"+minString);
 
         if(toggleState){
             notifyTb.setChecked(true);
@@ -123,7 +140,14 @@ public class notificationActivity extends AppCompatActivity {
             Intent t = new Intent(notificationActivity.this, AlarmReceiver.class);
             t.putExtra("notificationId", 1);
             t.putExtra("appMessage", "הגיע הזמן ללמוד קצת כימיה");
-            t.putExtra("soundUri",chosenRingtone);
+
+            if(chosenRingtone==null){
+                t.putExtra("soundUri","None");
+            }
+            else {
+                t.putExtra("soundUri",chosenRingtone);
+            }
+
 
             alarmIntent = PendingIntent.getBroadcast(notificationActivity.this, 0,
                     t, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -135,16 +159,28 @@ public class notificationActivity extends AppCompatActivity {
             startTime.set(Calendar.HOUR_OF_DAY, hour);
             startTime.set(Calendar.MINUTE, minute);
             startTime.set(Calendar.SECOND,10);
-            Log.d( "Hour and minute",hour+":"+minute);
 
             alarm.setRepeating(AlarmManager.RTC_WAKEUP,
                     startTime.getTimeInMillis(),
                     AlarmManager.INTERVAL_DAY,
                     alarmIntent);
+            if(minute<10){
+                minString = "0"+Integer.toString(minute);
+            }
+            else{
+                minString = Integer.toString(minute);
+            }
 
-            timeBtn.setText("קביעת שעות לחזרה - "+Integer.toString(hour)+":"+Integer.toString(minute));
+            if(hour<10){
+                hourString = "0"+Integer.toString(hour);
+            }
+            else{
+                hourString = Integer.toString(hour);
 
-            Toast.makeText(this, "התראות מאופשרות ונקבעו לשעה "+Integer.toString(hour)+":"+Integer.toString(minute), Toast.LENGTH_SHORT).show();
+            }
+            timeBtn.setText("קביעת שעות לחזרה - "+hourString+":"+minString);
+
+            Toast.makeText(this, "התראות מאופשרות ונקבעו לשעה "+hourString+":"+minString, Toast.LENGTH_SHORT).show();
         }
         else{
 
@@ -157,7 +193,22 @@ public class notificationActivity extends AppCompatActivity {
                 alarm.cancel(alarmIntent);
             }
 
-            timeBtn.setText("קביעת שעות לחזרה - "+Integer.toString(hour)+":"+Integer.toString(minute));
+            if(minute<10){
+                minString = "0"+Integer.toString(minute);
+            }
+            else{
+                minString = Integer.toString(minute);
+            }
+
+            if(hour<10){
+                hourString = "0"+Integer.toString(hour);
+            }
+            else{
+                hourString = Integer.toString(hour);
+
+            }
+
+            timeBtn.setText("קביעת שעות לחזרה - "+hourString+":"+minString);
             Toast.makeText(this, "התראות כבויות", Toast.LENGTH_SHORT).show();
         }
     }
@@ -190,6 +241,27 @@ public class notificationActivity extends AppCompatActivity {
                 getSharedPreferences("com.example.chemistryapp",MODE_PRIVATE).edit();
         editor.putString("sound",chosenRingtone);
         editor.commit();
+        enableAlarm(null);
+    }
+
+    public void setDefault(View view) {
+        hour = 10;
+        minute = 0;
+        chosenRingtone = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION).toString();
+
+        SharedPreferences.Editor editor =
+                getSharedPreferences("com.example.chemistryapp",MODE_PRIVATE).edit();
+
+        editor.putString("sound",chosenRingtone);
+        editor.commit();
+
+        editor.putInt("hour",hour);
+        editor.commit();
+
+        editor.putInt("minute",minute);
+        editor.commit();
+
+
         enableAlarm(null);
     }
 }

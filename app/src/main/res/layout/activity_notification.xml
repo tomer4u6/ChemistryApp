@@ -99,6 +99,7 @@
                 android:layout_weight="1"
                 android:gravity="right|center"
                 android:text="איפוס לברירת מחדל"
+                android:onClick="setDefault"
                 android:textSize="24sp" />
         </LinearLayout>
 

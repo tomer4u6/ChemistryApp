@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
@@ -15,7 +16,14 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         int notificationId = intent.getIntExtra("notificationId",0);
         String message = intent.getStringExtra("appMessage");
-        Uri sound = Uri.parse(intent.getStringExtra("soundUri"));
+        Uri sound;
+
+        if(intent.getStringExtra("soundUri").equals("None")){
+            sound = null;
+        }
+        else{
+            sound = Uri.parse(intent.getStringExtra("soundUri"));
+        }
 
         Intent t = new Intent(context,MainActivity.class);
         t.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -26,6 +34,11 @@ public class AlarmReceiver extends BroadcastReceiver {
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         long[] v = {500,1000};
+
+        if(sound == null){
+            v[0] = 0;
+            v[1] = 0;
+        }
 
         Notification.Builder builder = new Notification.Builder(context);
         builder.setSmallIcon(R.mipmap.ic_launcher_round)
