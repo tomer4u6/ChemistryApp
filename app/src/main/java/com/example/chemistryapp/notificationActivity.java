@@ -2,19 +2,15 @@ package com.example.chemistryapp;
 
 import android.app.Activity;
 import android.app.AlarmManager;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -24,7 +20,6 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public class notificationActivity extends AppCompatActivity {
 

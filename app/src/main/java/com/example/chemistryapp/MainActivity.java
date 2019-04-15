@@ -1,4 +1,4 @@
-//Version 1008
+//Version 1009
 package com.example.chemistryapp;
 
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 

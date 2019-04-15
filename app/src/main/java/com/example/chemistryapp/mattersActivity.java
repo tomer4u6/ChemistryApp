@@ -5,10 +5,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,14 +22,30 @@ public class mattersActivity extends AppCompatActivity implements AdapterView.On
             "מלח בישול - NaCl",
             "אספירין - C9H8O4",
             "גלוקוז - C6H12O6",
-            "פחמן דו חמצני - CO2"
+            "פחמן דו חמצני - CO2",
+            "אוזון - O3",
+            "סודה לשתייה - NaHCO3",
+            "ציאניד - -CH",
+            "אצטון - C3H6O",
+            "פוספט - PO4-3",
+            "אתנול - C2H6O",
+            "קפאין - C8H10N4O2"
+
+
     };
     int[] mattersId = {
             R.string.water,
             R.string.salt,
             R.string.aspirin,
             R.string.glucose,
-            R.string.carbonDioxide
+            R.string.carbonDioxide,
+            R.string.ozone,
+            R.string.bakeSoda,
+            R.string.cyanide,
+            R.string.acetone,
+            R.string.phosphate,
+            R.string.ethanol,
+            R.string.caffeine,
     };
 
     int[] imageArray1 = {
@@ -41,14 +53,28 @@ public class mattersActivity extends AppCompatActivity implements AdapterView.On
             R.drawable.saltimg,
             R.drawable.aspirinimg,
             R.drawable.glucoseimg,
-            R.drawable.carbondioxideimg
+            R.drawable.carbondioxideimg,
+            R.drawable.ozoneimg,
+            R.drawable.sodaimg,
+            R.drawable.cyanideimg,
+            R.drawable.acetoneimg,
+            R.drawable.phosphateimg,
+            R.drawable.ethanolimg,
+            R.drawable.caffeineimg,
     };
     int[] imageArray2 = {
             R.drawable.watermol,
             R.drawable.saltmol,
             R.drawable.aspirinmol,
             R.drawable.glucosemol,
-            R.drawable.carbondioxidemol
+            R.drawable.carbondioxidemol,
+            R.drawable.ozonemol,
+            R.drawable.sodamol,
+            R.drawable.cyanidemol,
+            R.drawable.acetonemol,
+            R.drawable.phosphatemol,
+            R.drawable.ethanolmol,
+            R.drawable.caffeinemol,
     };
 
     AlertDialog.Builder adb;

@@ -21,7 +21,7 @@
         android:shadowDx="8"
         android:shadowDy="8"
         android:shadowRadius="12"
-        android:text="חומרים מחיי היומיום"
+        android:text="חומרים מוכרים שונים"
         android:textColor="#ffffff"
         android:textDirection="rtl"
         android:textSize="30sp"
