@@ -23,7 +23,7 @@
         android:text="כימיה לחטיבת הביניים"
         android:textColor="#ffffff"
         android:textDirection="rtl"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <LinearLayout

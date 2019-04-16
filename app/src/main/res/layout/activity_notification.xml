@@ -23,7 +23,7 @@
         android:text="הגדרות התראה"
         android:textColor="#ffffff"
         android:textDirection="rtl"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <LinearLayout

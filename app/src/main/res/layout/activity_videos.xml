@@ -20,10 +20,10 @@
         android:shadowDx="8"
         android:shadowDy="8"
         android:shadowRadius="12"
-        android:text="סרטוני הסבר"
+        android:text="סרטונים שונים"
         android:textColor="#ffffff"
         android:textDirection="rtl"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -154,8 +154,8 @@
             android:textDirection="rtl"
             android:onClick="openVideo"
             android:background="@drawable/rounded_btn"
-            android:tag="https://www.youtube.com/watch?v=rz4Dd1I_fX0"
-            android:text="שיר באנגלית על הטבלה המחורית" />
+            android:tag="https://youtu.be/KoHv1Bx868s"
+            android:text="ניסוי שני הסדקים" />
 
         <Space
             android:layout_width="0dp"
@@ -166,13 +166,119 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textDirection="rtl"
-            android:onClick="openVideo"
             android:background="@drawable/rounded_btn"
+            android:gravity="center"
+            android:onClick="openVideo"
+            android:tag="https://www.youtube.com/watch?v=0Bt6RPP2ANI"
+            android:text="עשרה סרטונים מדהימים בכימיה"
+            android:textDirection="rtl"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_btn"
+            android:gravity="center"
+            android:onClick="openVideo"
+            android:tag="https://youtu.be/m55kgyApYrY"
+            android:text="מתכות אלקליות מגיבות עם מים"
+            android:textDirection="rtl"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_btn"
+            android:gravity="center"
+            android:onClick="openVideo"
+            android:tag="https://www.youtube.com/watch?v=op4lmebNo0o"
+            android:text="16 ניסויים שאפשר לעשות בבית"
+            android:textDirection="rtl"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_btn"
+            android:gravity="center"
+            android:onClick="openVideo"
+            android:tag="https://www.youtube.com/watch?v=rz4Dd1I_fX0"
+            android:text="שיר באנגלית על הטבלה המחורית"
+            android:textDirection="rtl"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_btn"
+            android:gravity="center"
+            android:onClick="openVideo"
             android:tag="https://www.youtube.com/watch?v=o1Ov3xk1F7g"
-            android:text="הסבר על פצצת אטום" />
+            android:text="הסבר על פצצת אטום"
+            android:textDirection="rtl"
+            android:textStyle="bold" />
 
         <Space
             android:layout_width="0dp"

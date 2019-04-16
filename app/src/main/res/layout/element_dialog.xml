@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:id="@+id/element_dialog"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
     android:gravity="center">
 
     <Space
@@ -77,4 +79,9 @@
             android:textSize="18sp"
             android:text="TextView" />
     </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1" />
 </LinearLayout>
