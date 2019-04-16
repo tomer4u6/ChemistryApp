@@ -51,12 +51,12 @@
                 >
 
                 <TextView
-                    android:id="@+id/textView3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="A"
                     android:text="1\nH"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -79,8 +79,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="C"
                     android:text="3\nLi"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -90,8 +91,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="D"
                     android:text="4\nBe"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -107,8 +109,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="K"
                     android:text="11\nNa"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -118,8 +121,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="L"
                     android:text="12\nMg"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -135,8 +139,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="S"
                     android:text="19\nK"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -146,8 +151,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="T"
                     android:text="20\nCa"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -212,8 +218,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="B"
                     android:text="2\nHe"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -229,8 +236,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="E"
                     android:text="5\nB"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -240,32 +248,33 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="F"
                     android:text="6\nC"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView18"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="G"
                     android:text="7\nN"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView19"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="H"
                     android:text="8\nO"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -275,24 +284,24 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="I"
                     android:text="9\nF"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView21"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="J"
                     android:text="10\nNe"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
             </TableRow>
 
             <TableRow
@@ -305,8 +314,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="M"
                     android:text="13\nAl"
                     android:textColor="#000"
                     android:textSize="18sp" />
@@ -316,60 +326,60 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="N"
                     android:text="14\nSi"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView24"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="O"
                     android:text="15\nP"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView25"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="P"
                     android:text="16\nS"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView26"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="Q"
                     android:text="17\nCl"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView27"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
                     android:gravity="center"
+                    android:onClick="openElement"
+                    android:tag="R"
                     android:text="18\nAr"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
             </TableRow>
 
             <TableRow
