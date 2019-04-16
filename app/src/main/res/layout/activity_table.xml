@@ -75,7 +75,6 @@
                 >
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -87,7 +86,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -105,7 +103,6 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/textView6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -117,7 +114,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -135,7 +131,6 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -147,7 +142,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView9"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -214,7 +208,6 @@
                     android:layout_weight="5" />
 
                 <TextView
-                    android:id="@+id/textView28"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -232,7 +225,6 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/textView16"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -244,7 +236,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView17"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -256,7 +247,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -268,7 +258,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -280,7 +269,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView20"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -292,7 +280,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView21"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -310,7 +297,6 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/textView22"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -322,7 +308,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView23"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -334,7 +319,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView24"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -346,7 +330,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView25"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -358,7 +341,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView26"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -370,7 +352,6 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView27"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

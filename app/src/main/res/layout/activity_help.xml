@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layoutDirection="rtl"
+    tools:context=".HelpActivity">
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:text="ברוכים הבאים לאפליקציית ChemistryApp - כימיה לחטיבת הביניים.\n\nבמסך הראשי ישנם ארבעה כפתורים שכל אחד מהם מעביר למסך אחר בהתאם לכפתור. בכל אחד מן המסכים ישנו כפתור חזור בשורה העליונה של המסך שמחזיר למסך הראשי.\n\nבמסך הראשון, המסך של הטבלה המחזורית, מופיעים 20 היסודות הראשונים. בלחיצה על אחד מהיסודות נפתחת חלונית מידע על אותו היסוד. יש אפשרות לגלול את הטקסט כאשר הוא לא נכנס במלואו למסך. לחיצה על Close סוגרת את החלונית ומחזירה לטבלה.\n\nבמסך השני ישנם כפתורים שונים שלחיצה על כל אחד מהם פותחת סרטון ביוטיוב בהתאם לכפתור שנלחץ.\n\nבמסך השלישי ישנה רשימה נגללת של חומרים שונים. לחיצה על כל אחד מן החומרים פותחת חלונית מידע על אותו החומר. גם כאן ניתן לגלול את הטקסט אם הוא לא נכנס במלואו במסך. לחיצה על Close סוגרת את החלונית ומחזירה למסך.\n\nבמסך הרביעי אפשר לשנות את אפשרות ההתראה. ניתן לאפשר ולכבות את ההתראות בלחיצה על הכפתור שמראה את מצב ההתראות (אם מאופשרות או כבויות). ניתן לבחור את שעת החזרה הרצויה ואם ההתראות מאופשרות האפליקציה תשלח התראה באותה השעה בכל יום, כל עוד ההתראות מאופשרות. ניתן גם לשנות את צליל ההתראה. הכפתור לאיפוס לברירת מחדל מגדיר את שעת החזרה ל-10 בבוקר ואת צליל ההתראה לצליל ההתראה שמוגדר כברירת מחדל בטלפון. (לפעמים כאשר מגדירים התראה לשעה שקודמת לשעה הנוכחית שבה הוגדרה ההתראה, האפליקציה תשלח התראה אחת ולמחרת ההתראה תהיה בשעה שרגילה שנקבעה)."
+                android:textDirection="rtl"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1" />
+</LinearLayout>

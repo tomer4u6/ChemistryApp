@@ -123,6 +123,7 @@ public class notificationActivity extends AppCompatActivity {
         ad.show();
     }
 
+
     public void enableAlarm(View view) {
 
         if(notifyTb.isChecked()) {
